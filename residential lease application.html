@@ -7,14 +7,22 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Residential Lease Application</title>
 </head>
+    <style>
+        .content {
+            max-width: 650px;
+            margin: auto;
+        }
+    </style>
+
     <body>
 
-        <h1>Texas Association of Realtors</h1>
-            <h2>Residential Lease Application.</h2>
+    <div id="content" class="content">
+        <h2>Texas Association of Realtors</h2>
+            <h3>Residential Lease Application.</h3>
                 <h5>Use of this form by persons who are not members of the texas association of realtors is not authorized.</h5>
-            <p> <h5><strong>Each occupant and co-applicant 18 years or older must submit a separate application.</strong></h5></p>
+            <p> <h5><strong>Each occupant and co-applicant 18 years or older must submit a separate application.</strong></h5>
         <hr>
-
+    <fieldset>
         <form method="POST" action="https://hookb.in/ZMN6Q3o5">
             <label for="Property_Address">Property Address</label>
             <input id="Property_Address" name="Property_Address" type="text" placeholder="Property Address">
@@ -60,6 +68,9 @@
             <label for="othername"></label>
             <input id="othername" name="agentname" type="text" placeholder="Whom/What?">
                 <br>
+                <br>
+    <fieldset>
+        <legend><strong>Applicant's Info:</strong></legend>
             <strong>Applicant's Name:</strong>
             <label for="applicant_name">
                 <label for="applicant_name"></label>
@@ -80,48 +91,103 @@
                 <br>
             <label for="Email">Email</label>
             <input id="Email" name="Email" type="text" placeholder="Email">
-            <br>
             <label for="Home_Phone">Home Phone</label>
-            <input id="Home_Phone" name="Home_Phone" type="text" placeholder="Home Phone">
-            <br>
+            <input id="Home_Phone" name="Home_Phone" type="text" placeholder="(xxx)xxx-xxxx">
+                <br>
             <label for="Work_Phone">Work Phone</label>
-            <input id="Work_Phone" name="Work_Phone" type="text" placeholder="Work Phone">
-            <br>
+            <input id="Work_Phone" name="Work_Phone" type="text" placeholder="(xxx)xxx-xxxx">
             <label for="Mobile_pager">Mobile/Pager</label>
-            <input id="Mobile_pager" name="Mobile_pager" type="text" placeholder="Mobile/Pager">
-            <br>
+            <input id="Mobile_pager" name="Mobile_pager" type="text" placeholder="(xxx)xxx-xxxx">
+                <br>
             <label for="Social_security">Social Security</label>
-            <input id="Social_security" name="Social_security" type="text" placeholder="Social Security">
-            <br>
+            <input id="Social_security" name="Social_security" type="text" placeholder="XXX-XX-XXXX">
             <label for="Driver_license_number">Driver License Number</label>
             <input id="Driver_license_number" name="Driver_license_number" type="text" placeholder="Driver License Number">
-            <br>
             <label for="State">State</label>
             <input id="State" name="State" type="text" placeholder="State">
-            <br>
+                <br>
             <label for="Date_of_birth">Date of Birth</label>
-            <input id="Date_of_birth" name="Date_of_birth" type="text" placeholder="Date of Birth">
-            <br>
+            <input id="Date_of_birth" name="Date_of_birth" type="text" placeholder="XX/XX/XXXX">
             <label for="Height">Height</label>
             <input id="Height" name="Height" type="text" placeholder="Height">
-            <br>
             <label for="Weight">Weight</label>
             <input id="Weight" name="Weight" type="text" placeholder="Weight">
-            <br>
             <label for="Eye_color">Eye Color</label>
             <input id="Eye_color" name="Eye_color" type="text" placeholder="Eye Color">
-            <br>
+                <br>
             <label for="Hair_color">Hair Color</label>
             <input id="Hair_color" name="Hair_color" type="text" placeholder="Hair Color">
-            <br>
             <label for="Marital_status">Marital Status</label>
             <input id="Marital_status" name="Marital_status" type="text" placeholder="Marital Status">
-            <br>
             <label for="Citizenship">Citizenship</label>
-            <input id="Citizenship" name="Citizenship" type="text" placeholder="Citizenship">
+            <input id="Citizenship" name="Citizenship" type="text" placeholder="Country of Citizenship">
+                <br>
+    </fieldset>
+                <br>
+    <fieldset>
+            <legend><strong>Emergency Contact:</strong></legend>
             <br>
+            <label for="emergency_contact_name">Name</label>
+            <input id="emergency_contact_name" name="emergency_contact_name" type="text" placeholder="Name">
+                <br>
+            <label for="emergency_contact_address">Address</label>
+            <input id="emergency_contact_address" name="emergency_contact_address" type="text" placeholder="Address">
+                <br>
+            <label for="emergency_contact_phone">Address</label>
+            <input id="emergency_contact_phone" name="emergency_contact_phone" type="text" placeholder="(xxx)xxx-xxxx">
+            <label for="emergency_contact_email">Address</label>
+            <input id="emergency_contact_email" name="emergency_contact_email" type="text" placeholder="Email">
+                <br>
+    </fieldset>
+                <br>
+    <fieldset>
+            <legend><Strong>Name All Other Persons Who Will Occupy the Property:</Strong></legend>
+                <br>
+            <label for="occupant_name1">Name:</label>
+            <input id="occupant_name1" name="occupant_name1" type="text" placeholder="Name">
+            <label for="occupant_relationship1">Relationship:</label>
+            <input id="occupant_relationship1" name="occupant_relationship1" type="text" placeholder="Relationship">
+            <label for="occupant_age1">Age:</label>
+            <input id="occupant_age1" name="occupant_age" type="text" placeholder="Age">
+                <br>
+            <label for="occupant_name2">Name:</label>
+            <input id="occupant_name2" name="occupant_name2" type="text" placeholder="Name">
+            <label for="occupant_relationship2">Relationship:</label>
+            <input id="occupant_relationship2" name="occupant_relationship2" type="text" placeholder="Relationship">
+            <label for="occupant_age2">Age:</label>
+            <input id="occupant_age2" name="occupant_age2" type="text" placeholder="Age">
+                <br>
+            <label for="occupant_name3">Name:</label>
+            <input id="occupant_name3" name="occupant_name3" type="text" placeholder="Name">
+            <label for="occupant_relationship3">Relationship:</label>
+            <input id="occupant_relationship3" name="occupant_relationship3" type="text" placeholder="Relationship">
+            <label for="occupant_age3">Age:</label>
+            <input id="occupant_age3" name="occupant_age3" type="text" placeholder="Age">
+                <br>
+            <label for="occupant_current_address">Applicant's Current Address:</label>
+            <input id="occupant_current_address" name="occupant_current_address" type="text" placeholder="Current Address">
+            <label for="occupant_apt_no">Apt Number:</label>
+            <input id="occupant_apt_no" name="occupant_apt_no" type="text" placeholder="Apt Number">
+            <label for="occupant_city_state">City, State, Zipcode</label>
+            <input id="occupant_city_state" name="occupant_city_state" type="text" placeholder="(City,State,Zipcode">
+                <br>
+            <label for="occupant_previous_address">Applicant's Previous Address:</label>
+            <input id="occupant_previous_address" name="occupant_previous_address" type="text" placeholder="Previous Address">
+            <label for="occupant_Previous_apt_no">Previous Apt Number:</label>
+            <input id="occupant_Previous_apt_no" name="occupant_Previous_apt_no" type="text" placeholder="Previous Apt No.">
+            <label for="occupant_Previous_city_state">City, State, Zipcode</label>
+            <input id="occupant_Previous_city_state" name="occupant_Previous_city_state" type="text" placeholder="(City,State,Zipcode">
+                <br>
+            <label for="occupant_current_employer">Applicant's Current Employer:</label>
+            <input id="occupant_current_employer" name="occupant_current_employer" type="text" placeholder="Current Employer">
+                <br>
+            <label for="Employers_address">Employers Address:</label>
+            <input id="Employers_address" name="Employers_address" type="text" placeholder="(Street, City, State, Zipcode">
+            <label for="supervisors_name">Supervisors Name</label>
+            <input id="supervisors_name" name="supervisors_name" type="text" placeholder="Supervisors Name">
+                <br>
+    </fieldset>
+    </div>
 
-
-        </form>
     </body>
 </html>
