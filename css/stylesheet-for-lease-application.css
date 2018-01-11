@@ -1,0 +1,16 @@
+input {
+    border: 0;
+    outline: 0;
+    background: transparent;
+    border-bottom: 1px solid black;
+}
+header {
+    text-align: center;
+}
+
+#header h2, h3, h5 {
+ font-weight: bold;
+    font-weight: 400;
+    font-family: "Gill Sans", sans-serif;
+
+}
