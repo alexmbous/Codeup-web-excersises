@@ -1,0 +1,18 @@
+.fancy-header {
+    color: purple;
+    text-decoration: underline;
+    text-align: center;
+}
+.h1, h2 {
+    text-decoration: underline;
+}
+
+html {
+    background-color: darkgoldenrod;
+    background-image: url(pexels-photo-785419.jpeg);
+    font-style: inherit;
+}
+
+body {
+    color: white;
+}
