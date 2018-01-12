@@ -1,18 +1,33 @@
 .fancy-header {
-    color: purple;
+    color: White;
     text-decoration: underline;
     text-align: center;
 }
 .h1, h2 {
     text-decoration: underline;
+    text-align: center;
 }
 
 html {
     background-color: darkgoldenrod;
     background-image: url(pexels-photo-785419.jpeg);
-    font-style: inherit;
+    font-family: 'Fjord One', serif;
+    text-align: center;
 }
 
 body {
-    color: white;
+    color: #F9F9FF;
+}
+ol{
+    list-style-type: armenian;
+}
+ul {
+    list-style-type: circle;
+}
+.centered {
+    display: block;
+    width: 30%;
+    margin-left: auto;
+    margin-right: auto;
+
 }
