@@ -2,20 +2,19 @@
 
 .box {
 	border: 1px solid black;
-	width: 150px;
+	width: 50px;
 	height: 50px;
 	padding: 10px;
 	font-weight: bold;
+	text-shadow: 2px 2px black;
 	color: #fff;
 	margin-bottom: 10px;
-	
 }
 #ribbon {
 	position: fixed;
-	top: 0%;
-	right: 0%;
+	top: 0;
+	right: 0;
 }
-
 #box-red {
 	background-color: red
 }
@@ -26,7 +25,6 @@
 #box-yellow {
 	background-color: yellow;
 	margin-left: 60px;
-	color: black;
 }
 #box-green {
 	background-color: green;
