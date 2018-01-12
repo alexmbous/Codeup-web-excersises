@@ -1,0 +1,20 @@
+.texas {
+    margin: 3em;
+    width: 24em;
+    height: 16em;
+    background: linear-gradient(rgb(255,255,255) 50%, rgb(191,10,48) 50%);
+    ;
+}
+
+.texas::before {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1em;
+    width: 33%;
+    height: 100%;
+    content: '★';
+    font-size: 6em;
+    color: rgb(255,255,255);
+    background: rgb(0,40,104);
+}

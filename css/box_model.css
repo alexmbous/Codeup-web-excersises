@@ -1,6 +1,4 @@
-h1 {
 
-}
 
 .box {
 	border: 1px solid black;
@@ -23,7 +21,7 @@ h1 {
 #box-yellow {
 	background-color: yellow;
 	margin-left: 60px;
-	text-decoration-color: black;
+	color: black;
 }
 #box-green {
 	background-color: green;
