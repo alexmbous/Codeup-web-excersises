@@ -10,6 +10,11 @@
 	margin-bottom: 10px;
 	
 }
+#ribbon {
+	position: fixed;
+	top: 0%;
+	right: 0%;
+}
 
 #box-red {
 	background-color: red

@@ -1,0 +1,59 @@
+
+/*top white*/
+/*#E4E4E4 search bar color.*/
+/*#34383B text color top*/
+/*#AC2D25 top red.*/
+/*#9B2821 bottom red / 404 error message.*/
+/*#2F2F2F dark gray for bbc news service bar.*/
+/*#4C4C4C light gray for bottom area.*/
+
+
+
+/* Add a black background color to the top navigation */
+.top_nav {
+    background-color: white;
+    overflow: hidden;
+    color: #34383B;
+    float: left;
+}
+
+/*.search_button {*/
+    /*width:40px;*/
+    /*height:40px;*/
+    /*border: 1px solid black;*/
+/*}*/
+
+/* Style the links inside vigation bar */
+.top_nav a {
+    float: left;
+    color: #2F2F2F;
+    text-align: center;
+    padding: 14px 30px;
+    text-decoration: #34383B;
+    font-size: 17px;
+}
+
+/*.top_nav .search-button {*/
+    /*float: right;*/
+    /*padding: 6px 10px;*/
+    /*margin-top: 8px;*/
+    /*margin-right: 16px;*/
+    /*background: #ddd;*/
+    /*font-size: 17px;*/
+    /*border: none;*/
+    /*cursor: pointer;*/
+/*}*/
+
+/* Change the color of links on hover */
+.top_nav a:hover {
+    background-color: lightgray;
+    color: black;
+}
+/* Add a color to the active/current link */
+.top_nav a.active {
+    background-color: #4CAF50;
+    color: white;
+}
+.search {
+    height: 30px;
+}
