@@ -1,0 +1,114 @@
+
+    /* Small devices (tablets, 768px and up) */
+    @media screen and (max-width:768px) {
+        #main {
+            float: left;
+        }
+        .h1 {
+            clear: both;
+            text-align: center;
+            margin: 0;
+        }
+        #header-img {
+            text-align: center;
+        }
+        .sub-section {
+            float: left;
+        }
+        .nav-links a {
+            list-style-type: none;
+            display: block;
+            background: lightgray;
+            margin: 0 0 5px 0;
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .alert-info.hidden-on-desktop {
+            display: block;
+            background: powderblue;
+            max-width: 100%;
+        }
+        .nav-links {
+            float: none;
+            padding: 0% 40%;
+        }
+    }
+    /* Medium devices (desktops, 992px and up) */
+    @media screen and (min-width:992px) {
+        #main {
+            float: left;
+        }
+        .sub-section {
+            float: left;
+        }
+        .alert-info.hidden-on-desktop {
+            display: none;
+        }
+        .nav-links a {
+            top: 0;
+            text-align: center;
+            padding: 0px 15px;
+            font-size: 17px;
+            margin: 0;
+        }
+    }
+    /* Large devices (large desktops, 1200px and up) */
+    @media screen and (min-width:1200px) {
+        #main {
+            float: left;
+        }
+        .sub-section {
+            float: left;
+        }
+        .alert-info.hidden-on-desktop {
+            display: none;
+        }
+        .nav-links a {
+            top: 0;
+            text-align: center;
+            padding: 0px 15px;
+            font-size: 17px;
+            margin: 0;
+        }
+    }
+    body>h1 {
+        clear: both;
+        float: left;
+        margin: 0;
+    }
+    .nav-links a {
+        top: 0;
+        text-align: center;
+        font-size: 17px;
+        margin: 0 0 5px 0;
+        padding: 0 15px;
+    }
+    .nav-links {
+        float: right;
+    }
+    #main {
+        float: left;
+        max-width: 500px;
+    }
+    .sub-section {
+        float: left;
+        max-width: 500px;
+    }
+    .sub-section {
+        font-style: italic;
+    }
+    li {
+        display: inline;
+    }
+    img {
+        width: 98%;
+    }
+    footer {
+            clear: both;
+             left: 0 ;
+             right: 0;
+             bottom: 0;
+             height: 100%;
+            padding-top: 400px;
+         }
