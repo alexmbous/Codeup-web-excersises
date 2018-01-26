@@ -1,21 +1,111 @@
 "use strict";
 
-var myNameIs = 'Bob'; // TODO: Fill in your name here.
+/**
+ * TODO:
+ * Create a function called 'sayHello' that takes a parameter 'name'.
+ * When called, the function should return a message that says hello to the passed in name.
+ *
+ * Example
+ * > sayHello("codeup") // returns "Hello, codeup!"
+ */
 
-// TODO:
-// Create a function called 'sayHello' that takes a parameter 'name'.
-// When called, the function should log a message that says hello from the passed in name.
 
-// TODO: Call the function 'sayHello' passing the variable 'myNameIs' as a parameter.
+var myName = 'Alex';
+/**
+ * TODO:
+ * Call the function 'sayHello' and pass your name as a string literal argument.
+ * Store the result of the function call in a variable named 'helloMessage'.
+ *
+ * console.log 'helloMessage' to check your work
+ */
+function sayHello(input) {
+       var helloMessage = console.log("Hello from " + input);
+       return helloMessage;
+}
+        sayHello(myName);
 
-// Don't modify the following line
-// It generates a random number between 1 and 100 and stores it in random
-var random = Math.floor((Math.random()*100)+1);
+/**
+ * TODO:
+ * Store your name as a string in a variable named 'myName', and pass that
+ * variable to the 'sayHello' function. You should see the same output in the
+ * console.
+ */
 
-// TODO:
-// Create a function called 'isOdd' that takes a number as a parameter.
-// The function should use the ternary operator to log a message.
-// The log should tell the number passed in and whether it is odd or not.
 
-// TODO: Call the function 'isOdd' passing the variable 'random' as a parameter.
 
+// Don't modify the following line, it generates a random number between 1 and 3
+// and stores it in a variable named random
+var random = Math.floor((Math.random() * 3) + 1);
+
+/**
+ * TODO:
+ * Create a function called 'isTwo' that takes a number as a parameter.
+ * The function should return a boolean value based on whether or not the passed
+ * number is the number 2.
+ *
+ * Example
+ * > isTwo(1) // returns false
+ * > isTwo(2) // returns true
+ * > isTwo(3) // returns false
+ *
+ * Call the function 'isTwo' passing the variable 'random' as a argument.
+ *
+ * console.log *outside of the function* to check your work (you should see a
+ * different result every time you refresh the page if you are using the random
+ * number)
+ */
+
+
+function isTwo(randomNumber) {
+    var two = 2;
+    return  console.log("Is Random number 2? " + (randomNumber === two));
+}
+isTwo(random);
+
+/**
+ * TODO:
+ * Create a function named 'calculateTip' to calculate a tip on a bill at a
+ * restaurant. The function should accept a tip percentage and the total of the
+ * bill, and return the amount to tip
+ *
+ * Examples:
+ * > calculateTip(0.20, 20) // returns 4
+ * > calculateTip(0.25, 25.50) // returns 6.37
+ * > calculateTip(0.15, 33.42) // returns 5.013
+ */
+function calculateTip(tipPercent, billTotal) {
+    billTotal = Number(prompt("What is the Bill Total?"));
+    tipPercent = Number(prompt ("What percent would you like to tip?"));
+    tipPercent = tipPercent / 100;
+    var newTotal = billTotal + tipPercent * billTotal;
+    return console.log ("Your total with Tip is $" + (newTotal));
+}
+calculateTip();
+
+/**
+ * TODO:
+ * Use prompt and alert in combination with your calculateTip function to
+ * prompt the user for the bill total and a percentage they would like to tip,
+ * then display the dollar amount they should tip
+ */
+
+
+
+/**
+ * TODO:
+ * Create a function named `applyDiscount`. This function should accept a price
+ * (before a discount is applied), and a discount percentage (a number between 0
+ * and 1). It should return the result of applying the discount to the original
+ * price.
+ *
+ * Example:
+ * > var originalPrice = 100;
+ * > var dicountPercent = .2; // 20%
+ * > applyDiscount(originalPrice, dicountPercent) // 80
+ *
+ * > applyDiscount(45.99, 0.12) // 40.4712
+ */
+function applyDiscount(ogPrice, discount) {
+    var discPrice = ogPrice - (discount * ogPrice);
+    return discPrice;
+}
