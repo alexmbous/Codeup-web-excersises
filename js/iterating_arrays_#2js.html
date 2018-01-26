@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Iterating Array JS</title>
+	</head>
+	<body>
+		<script >
+
+
+
+			 var names = ['Renee', 'Natalie', 'Bill', 'Ally'];
+
+			for (var i = 0; i < names.length; i++ ) {
+				console.log("Names at index " + i + " is " + names[i]);
+			}
+
+
+    // TODO: Create a log statement that will log the number of elements in the names array.
+    		console.log('There are ' + names.length + ' names in the array');
+
+    		names.forEach(function (element, index, array) {
+
+				console.log('The Name at index ' + index + ' is: ' + element);
+			});
+
+    // TODO: Create log statements that will print each of the names array elements individually.
+    		console.log('The first name is: ' + names[0]);
+    		console.log('The second name is: ' + names[1]);
+    		console.log('The third name is: ' + names[2]);
+    		console.log('The fourth name is: ' + names[3]);
+
+
+		</script>
+
+
+	</body>
+</html>

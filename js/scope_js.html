@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Scope JS</title>
+	</head>
+	<body>
+			<script>
+			
+				(function() {
+
+				var myNameIs = 'Alex';
+				function sayHello() {
+					console.log("Hello from " + myNameIs);
+				}
+				sayHello(myNameIs);
+
+	var random = Math.floor((Math.random()*100)+1);
+
+	console.log("random Number Is: " + random.toString());
+
+				function isOdd(numberToTest) {
+					(numberToTest % 2 === 1) ? console.log("Number Was odd. ") : console.log("Number Was Even. ");
+					}
+				isOdd(random)
+
+			}) ();
+
+
+			</script>
+	</body>
+</html>
