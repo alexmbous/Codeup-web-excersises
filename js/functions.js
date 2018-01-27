@@ -19,7 +19,7 @@ var myName = 'Alex';
  * console.log 'helloMessage' to check your work
  */
 function sayHello(input) {
-       var helloMessage = console.log("Hello from " + input);
+       var helloMessage = console.log("Hello from " + input + "!");
        return helloMessage;
 }
         sayHello(myName);
