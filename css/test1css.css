@@ -1,0 +1,44 @@
+/**
+ * Apply rules by:
+ * - element selector
+ * - classes + ids
+ */
+
+/* Element Selectors */
+body {
+    background-color: mistyrose;
+    font-family: sans-serif;
+}
+
+h1 {
+    color: white;
+}
+
+/* Select by ID or class name */
+
+#my-special-heading {
+    color: firebrick;
+}
+
+.give-us-some-space {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+
+/* Combining element + class selector */
+
+p.highlight {
+    background-color: yellow;
+}
+
+/* /1* any `p` element inside of any element w/ the class of .parent-container *1/ */
+/* .parent-container p { */
+/*     font-family: fantasy; */
+/* } */
+
+/* any `p` element that is a direct child of any element w/ the class of
+ * .parent-container */
+.parent-container > p {
+    font-family: fantasy;
+}
+
