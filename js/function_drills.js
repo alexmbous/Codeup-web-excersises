@@ -1,67 +1,69 @@
 //
 //
 // // Make a function named sayHello(name) that returns "Hi " + name.
-// function sayHello(name) {
-//     var username = prompt ("Whats your name?");
-//     return console.log ("Hi " + username);
-// }
-// sayHello()
-//
+
+function sayHello(name) {
+    var username = prompt ("Whats your name?");
+    return console.log ("Hi " + username);
+}
+sayHello()
+
 // //     Write a function named capitalize(string) that takes a string of any capitalization and uppercases the first character and lowercases the rest of the characters of a string.
-// function capitalize(string) {
-//     var firstLetter = string.substring(0,1).toUpperCase();
-//     var otherLetters = string.substring(1).toLowerCase();
-//     return firstLetter + otherLetters;
-// }
-//
-// //     Write a function named upperCase(string)
-// function upperCase(string) {
-//     return upperCase = string.toUpperCase();
-// }
+function capitalize(string) {
+    var firstLetter = string.substring(0,1).toUpperCase();
+    var otherLetters = string.substring(1).toLowerCase();
+return firstLetter + otherLetters;
+}
+
+
+//     Write a function named upperCase(string)
+function upperCase(string) {
+    return upperCase = string.toUpperCase();
+}
 //
 //
 //
 // // Make a function named identity(input) that returns the input exactly as provided.
 //
-// function identity(input) {
-//     return input;
-// }
-// console.log ("this is for identity");
-//
-//
+function identity(input) {
+    return input;
+}
+console.log ("this is for identity");
+
+
 // //     Make a function named isOdd(number)
-// function isOdd(number) {
-//     return number % 2 === 1;
-// }
-// console.log = isOdd();
+function isOdd(number) {
+    return number % 2 === 1;
+}
+console.log = isOdd();
 
 
 // Make a function named isEven(number)
-// function isEven(number) {
-//     return number % 2 === 0;
-// }
-// console.log = isEven();
+function isEven(number) {
+    return number % 2 === 0;
+}
+console.log = isEven();
 
 // Make a function named isPositive(number)
 
-// function isPositive(number){
-//     return number >= 0;
-// }
-// console.log = isPositive();
+function isPositive(number){
+    return number >= 0;
+}
+console.log = isPositive();
 
 // Make a function named isNegative(number)
 
-// function isNegative(number){
-//     return number <= 0;
-// }
-// console.log = isNegative();
+function isNegative(number){
+    return number <= 0;
+}
+console.log = isNegative();
 
 
 // Make a function named isBoolean(input)
-// function isBoolean(input){
-//     return typeof(input) == typeof(true);
-// }
-// console.log = isBoolean(true);
+function isBoolean(input){
+    return typeof(input) == typeof(true);
+}
+console.log = isBoolean(true);
 
 
 // Make a function named isTrue(boolean)
@@ -125,7 +127,12 @@ function isConsonant(letter){
 
 
 // Make a function named hasConsonants(string)
+
 // Make a function named isCapital(letter)
+function isCapital() {
+    
+}
+
 // Make a function named hasCapitalLetters(string) that returns if a string has any capitals.
 //     Make a function named isLowerCase(letter)
 // Make a function named hasLowerCase(string) that returns if a string has any lower cased
