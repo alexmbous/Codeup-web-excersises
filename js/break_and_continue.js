@@ -12,10 +12,10 @@ var input;
 /***************-******************/
 
 for(var i = 1; i <= 50; i++) {
-    if(i % 2 == 0) {
+    if(i % 2 === 0) {
         continue;
         }
-        if(i == input) {
+        if(i === input) {
         console.log("Yikes! Skipping the number " + i);
         continue;
         }
