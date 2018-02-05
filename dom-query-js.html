@@ -7,6 +7,10 @@
 <body>
 
 <h1 id="main-header">Hello World!</h1>
+<button></button>
+<button></button>
+<button></button>
+<button></button>
 <ul>
     <li data-dbid="1">Item 1</li>
     <li data-dbid="2">Item 2</li>
@@ -52,13 +56,14 @@
         var listItems = document.getElementsByTagName("li");
 
         // TODO: Set text color on every other list item to grey
+
+        for (var i = 0; i < listItems.length; i += 2){
+            if(i % 2 === 0) {
+            listItems[i].style.color = "grey";
+                }}
         // TODO: Set text color of li with dbid = 1 to blue
 
-        for (var i = 0; i < listItems.length; i += 2){
-            listItems[i].style.color = "grey";
-                }
-
-        for (var i = 0; i < listItems.length; i += 2){
+        for (var i = 0; i < listItems.length; i += 1){
             if (listItems[i].getAttribute('data-dbid') === '1') {
                 listItems[i].style.color = "blue";
                     }
