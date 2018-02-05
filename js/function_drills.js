@@ -139,12 +139,49 @@ function isCapital() {
 // Make a function named isSpace(letter) that returns if a character is a space character
 // Make a function named hasSpaces(string) that returns if a string has any space characters
 // Make a function named isZero(number)
+function isZero(number) {
+    if (number == 0) {
+        return true;
+    }else{
+        return false;
+    }
+}
 // Make a function named increment(number) that returns a number plus one
+function increment(number){
+    return number + 1;
+}
 // Make a function named decrement(number) that returns a number minus one
+function decrement(number){
+    return number - 1;
+}
 // Make a function named isFive(input)
+function isFive(input) {
+    if (input == 5)
+        return true;
+    else {
+        return false;
+    }
+}
 // Make a function named addFive(input) that adds five to some input.
+function addFive(input){
+    return input + 5;
+}
 //     Make a function named isMultipleOfFive(input)
+function isMultipleOfFive(input){
+    if(input % 5 == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
 // Make a function named isThree(input)
+function isThree(input){
+    if (input == 3){
+        return true;
+    } else {
+        return false;
+    }
+}
 // Make a function named isMultipleOfThree(input)
 // Make a function named isMultipleOfThreeAndFive(input)
 // Write a function named lowerCase(string)
