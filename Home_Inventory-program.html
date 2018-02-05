@@ -7,18 +7,18 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home Inventory System</title>
     <link rel="stylesheet" href="css/Home_inventory_program.css">
-    <script src=".idea/js/bootstrap-3.3.7-dist/css/bootstrap.css"></script>
+    <script src="js/bootstrap-3.3.7-dist/css/bootstrap.css"></script>
     <script src="js/jquery-2.2.4.min.js"></script>
 </head>
 <body>
 
 <div class="container">
-    <h2>Table</h2>
-    <p>The .table-bordered class adds border on all sides of the table and cells:</p>
+    <h2>Dynamic Grocery List</h2>
+
     <table class="table table-bordered">
         <thead>
         <tr>
-            <th>ingredient</th>
+            <th>Ingredient</th>
             <th>Standard</th>
             <th>Have</th>
             <th>Need</th>
@@ -27,25 +27,58 @@
         </thead>
         <tbody>
         <tr>
-            <td>Milk, Whole</td>
-            <td>1 gal</td>
-            <td>.5 gal</td>
+            <td><input type="text" class="ingredient" size="10" maxlength="10" placeholder="Ingredient" id="ingredient"                             name="inventoryLine"  aria-hidden=false></td>
+            <td><input type="text" class="standard" size="10" maxlength="10" placeholder="Should Have" id="standard"
+                       name="inventoryLine" aria-hidden=false></td>
+            <td><input type="text" class="have" size="10" maxlength="10" placeholder="Have" id="have"
+                       name="inventoryLine"  aria-hidden=false></td>
+            <td><input type="text" class="need" size="10" maxlength="10" placeholder="Need" id="need"
+                       name="inventoryLine"  aria-hidden=false></td>
+            <td><input type="text" class="cost" size="10" maxlength="10" placeholder="Cost" id="cost"
+                       name="inventoryLine"  aria-hidden=false></td>
+        </tr>
+        <tr>
+            <td>Sliced Cheese</td>
+            <td>1 package</td>
+            <td>.25 ea</td>
+            <td>.75 ea</td>
+            <td>2.25 per package </td>
+        </tr>
+        <tr>
+            <td>White Bread</td>
+            <td>1 loaf</td>
+            <td>.75 loaf</td>
             <td>.5 gal</td>
             <td>1.37 per .5 gal or </td>
-
-        </tr>
-        <tr>
-            <td>2</td>
-            <td>Debbie</td>
-        </tr>
-        <tr>
-            <td>3</td>
-            <td>John</td>
         </tr>
         </tbody>
     </table>
 </div>
 
 
+<script>
+    (function() {
+    "use strict";
+
+    var addInventoryItem = {};
+    addInventoryItem.ingredient = "";
+    addInventoryItem.need = "";
+    addInventoryItem.have = "";
+    addInventoryItem.buy = "";
+    addInventoryItem.cost = "";
+
+
+    function needHaveBuyCost(){
+
+    }
+
+})();
+</script>
+<script src="js/Home_inventory_program.js"></script>
 </body>
 </html>
+
+
+
+<div></div>
+<label for="ingredient" class="ingredient">Enter your ingredient.</label>
