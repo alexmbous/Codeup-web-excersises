@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <style>
+
+
+        body{
+            background: gray;
+        }
+        #timer {
+        width: 280px;
+        height: auto;
+        text-align: center;
+        display: block;
+        padding: 5px;
+        margin: 0 auto;
+    }
+    .stopWatch{
+        display: block;
+        text-align: center;
+        text-decoration-color: white;
+    }
+
+        button {
+            cursor: pointer;
+            text-align: center;
+            font-weight: 700;
+            width: 280px;
+            height: auto;
+            display: block;
+            padding: 5px;
+            margin: 0 auto;
+        }
+
+    </style>
+    <title>Stop Watch</title>
+</head>
+<body>
+    <h2 id="message" class="stopWatch">Stop Watch Timer</h2>
+    <br>
+        <h1 id="timer">Time : 00:00:00</h1>
+    <button id="start">Start Timer</button>
+    <br>
+    <button id="stop">Pause Timer</button>
+    <br>
+    <button id="clear">Clear Timer</button>
+
+
+
+
+
+<script>
+    "use strict";
+// BONUS Exercise:
+//     Create a stop watch app with the following features:
+//     1) stop watch display that shows the time to the nearest 100th of a second
+//     2) start button to start the stop watch
+//     3) reset button to reset the time to zero
+//     4) pause button to stop the stop watch
+// Additional Features:
+//     1) store a list of times in an aside div that are appended to every time the reset button is hit
+//     2) add delete buttons for each stored time that removes the time from the aside div
+//     3) add keyboard events to control starting, pausing, and resetting
+
+
+    var h1 = document.getElementsByTagName('h1')[0],
+    start = document.getElementById("start"),
+    stop = document.getElementById("stop"),
+    clear = document.getElementById("clear"),
+    seconds = 0, minutes = 0, hours = 0,
+    sec;
+
+    function add() {
+        seconds++;
+        if (seconds >= 60) {
+            seconds = 0;
+            minutes++;
+            if (minutes >= 60) {
+                minutes = 0;
+                hours++;
+            }
+        }
+        h1.textContent = (hours ? (hours > 9 ? hours : "0" + hours) : "00") + ":" + (minutes ? (minutes > 9 ? minutes : "0" + minutes) : "00") + ":" + (seconds > 9 ? seconds : "0" + seconds);
+        timer();
+    }
+
+    function timer() {
+       sec = setTimeout(add, 1000);
+    }
+    timer();
+
+    /* Start button */
+    start.onclick = timer;
+
+    /* Stop button */
+    stop.onclick = function() {
+        clearTimeout(sec);
+    };
+
+    /* Clear button */
+    clear.onclick = function() {
+        h1.textContent = "00:00:00";
+        seconds = 0; minutes = 0; hours = 0;
+    }
+
+
+</script>
+</body>
+</html>
