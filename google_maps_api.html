@@ -8,16 +8,43 @@
     <title>Google Map Exercise</title>
 
     <style>
+        body{
+            background: gray;
+        }
+        #inputaddress{
+            display: block;
+            margin-left: 35%;
+            width: 400px;
+            margin-top: 10px;
+        }
         #map {
+            margin-left: 30%;
             display: block;
             width: 500px;
             height: 500px;
+        }
+        button {
+            cursor: pointer;
+            text-align: center;
+            font-weight: 700;
+            width: 250px;
+            height: auto;
+            display: block;
+            padding: 5px;
+            margin-left: 45%;
+
         }
     </style>
 </head>
 <body>
 
+
+
 <div id="map"></div>
+<div>
+<span><input id="inputaddress" type="text"><button id="enterAddress">Enter Address</button></span>
+</div>
+
 
 
 
@@ -27,40 +54,39 @@
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjoTsliADN3Z865RsmQP7lqHy2dL3doAg"></script>
-
 <script>
     'use strict';
 
-
-    var mapDisplay = document.getElementById('map');
-
-    var options = {
-        zoom: 17,
-        center: {
-            lat: 29.4260,
-            lng: -98.4861
-        }
-    };
+    var enterAddress = document.getElementById("enterAddress");
+        enterAddress.addEventListener('click', function(){
+            var input = document.getElementById("inputaddress").value;
+            geocodeIt(input);
+    });
+        var mapDisplay = document.getElementById('map');
+        var options = {
+            zoom: 17,
+            center: {
+                lat: 29.4260,
+                lng: -98.4861
+            }
+        };
 
     var map = new google.maps.Map(mapDisplay, options);
+    var codeup = { lat: 29.426791, lng: -98.489602 };
+    var marker = new google.maps.Marker({
+        position: codeup,
+        map: map
+    });
 
-var address = "some address";
+    function geocodeIt(myaddress){
+            var geocoder = new google.maps.Geocoder();
+                geocoder.geocode({address: myaddress}, function(results, status){
 
-function geocodeIt(someaddress){
-        var geocoder = new google.maps.Geocoder();
-        geocoder.geocode({address: someAddress}, function(results, status){
-
-
-
-
-            if (status === "OK"){
-                map.setCenter(results[0].geometry.locaiton);
+                    if (status === "OK"){
+                        map.setCenter(results[0].geometry.location);
+                    }
+                });
             }
-        });
-    }
-
-
-
 
 
 
