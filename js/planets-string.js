@@ -31,14 +31,14 @@
      * string, and <li> tags around each planet.
      */
 
-    //  planetsArray = planetsString.split("<br>");
-    // console.log(planetsArray);
-    //
-    // planetsArray.unshift("<ul>");
-    // console.log(planetsArray);
-    //
-    // planetsArray.push("<ul>");
-    // console.log(planetsArray);
+     planetsArray = planetsString.split("<br>");
+    console.log(planetsArray);
+
+    planetsArray.unshift("<ul>");
+    console.log(planetsArray);
+
+    planetsArray.push("<ul>");
+    console.log(planetsArray);
 
     var outputString = "Mercury|Venus|Earth|Mars|Jupiter|Saturn|Uranus|Neptune";
 planetsArray = outputString.split("|");
