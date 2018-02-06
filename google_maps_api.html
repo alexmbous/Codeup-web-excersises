@@ -11,16 +11,16 @@
         body{
             background: gray;
         }
-        #inputaddress{
+        #inputAddress{
             display: block;
-            margin-left: 35%;
+            margin-left: 30%;
             width: 400px;
             margin-top: 10px;
         }
         #map {
-            margin-left: 30%;
+            margin-left: 10%;
             display: block;
-            width: 500px;
+            width: 700px;
             height: 500px;
         }
         button {
@@ -31,7 +31,7 @@
             height: auto;
             display: block;
             padding: 5px;
-            margin-left: 45%;
+            margin-left: 40%;
 
         }
     </style>
@@ -39,55 +39,133 @@
 <body>
 
 
-
 <div id="map"></div>
 <div>
-<span><input id="inputaddress" type="text"><button id="enterAddress">Enter Address</button></span>
+<span><input id="inputAddress" type="text"><button id="enterAddressBtn">Enter Address</button></span>
 </div>
-
-
-
-
-
-
-
 
 
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDjoTsliADN3Z865RsmQP7lqHy2dL3doAg"></script>
 <script>
     'use strict';
 
-    var enterAddress = document.getElementById("enterAddress");
-        enterAddress.addEventListener('click', function(){
-            var input = document.getElementById("inputaddress").value;
-            geocodeIt(input);
-    });
-        var mapDisplay = document.getElementById('map');
-        var options = {
-            zoom: 17,
-            center: {
-                lat: 29.4260,
-                lng: -98.4861
+    var washingtonDC = {
+        lat: 38.9072,
+        lng: -77.0369
+    };
+
+    var mapOptions = {
+        zoom: 13,
+        center: washingtonDC,
+        mapTypeId: google.maps.MapTypeId.ROADMAP
+    };
+
+    // var enterAddress = document.getElementById("enterAddressBtn");
+    //     enterAddress.addEventListener('click', function(){
+    //         var input = document.getElementById("inputAddress").value;
+    //         geocodeIt(input);
+    // });
+
+    var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+    var favoriteRestaurants = [
+        {
+            name: "BlackSalt",
+            address: "4883 MacArthur Blvd, Washington, DC 20007",
+            info: "Top choice's of Seafood in town."
+        },
+        {
+            name: "MiniBar & BarMini",
+            address: "855 E St NW, Washington, DC 20004",
+            info: "The Finest Dining in all of DC"
+        },
+        {
+            name: "Rose's Luxury",
+            address: "717 8th St SE, Washington, DC 20003",
+            info: "Expect an hour-plus wait for a some of the most exciting flavors."
+        }
+    ];
+
+    function addLocation(restObj) {
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({address: restObj.address}, function(results, status) {
+            if (status === google.maps.GeocoderStatus.OK) {
+                var position = results[0].geometry.location;
+                addMarkerAndInfoWindow(position, restObj.name, restObj.info);
+            } else {
+                alert("Unable to find location");
             }
-        };
+        });
+        favoriteRestaurants.forEach(function(favoriteRestaurant) {
+            addLocation(favoriteRestaurant);
+    })
+    }
 
-    var map = new google.maps.Map(mapDisplay, options);
-    var codeup = { lat: 29.426791, lng: -98.489602 };
-    var marker = new google.maps.Marker({
-        position: codeup,
-        map: map
+    function addMarkerAndInfoWindow(position, name, info) {
+        var marker = new google.maps.Marker({
+            position: position,
+            animation: google.maps.Animation.DROP,
+            icon: "images/eats.png",
+            map: map
+        });
+        marker.addListener("click", function() {
+            infoWindow.open(map, marker);
+        });
+        var infoWindowContent = '<h3>' + name + '</h3>';
+        infoWindowContent += '<p>' + info + '</p>';
+        var infoWindow = new google.maps.InfoWindow({
+            content: infoWindowContent
+        });
+    }
+    favoriteRestaurants.forEach(function(favoriteRestaurants) {
+        addInfoBox(favoriteRestaurant);
     });
 
-    function geocodeIt(myaddress){
-            var geocoder = new google.maps.Geocoder();
-                geocoder.geocode({address: myaddress}, function(results, status){
 
-                    if (status === "OK"){
-                        map.setCenter(results[0].geometry.location);
-                    }
-                });
-            }
 
+
+
+
+
+
+
+
+
+
+    // function geocodeIt(someAddress){
+    //     var geocoder = new google.maps.Geocoder();
+    //     geocoder.geocode({address: someAddress}, function(results, status){
+    //
+    //         if (status === "OK"){
+    //             map.setCenter(results[0].geometry.location);
+    //         }
+    //     });
+    // }
+    //
+    //
+    // geocoder.geocode({
+    //     address: favoriteRestaurants.address.Marker
+    // }, function(results, status){
+    //     if (status === "OK"){
+    //         var marker = new google.maps.Marker({
+    //             position: results[0].geometry.location,
+    //             map: map
+    //         });
+    //         map.setCenter(results[0].geometry.location);
+    //     }
+    // });
+    //
+    //
+    // function reverseGeocodeIt(latitude, longitude) {
+    //         var geocoder = new google.maps.Geocoder();
+    //             geocoder.geocode({location: {lat: latitude, lng: longitude}}, function(results, status){
+    //                 console.log(status);
+    //
+    //                 if (status === "OK") {
+    //                     console.log(results[0]);
+    //                     map.setCenter(results[0].geometry.location);
+    //                 }
+    //             });
+    //         }
 
 
 </script>
