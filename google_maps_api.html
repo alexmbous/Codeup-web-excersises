@@ -60,11 +60,25 @@
         mapTypeId: google.maps.MapTypeId.ROADMAP
     };
 
-    // var enterAddress = document.getElementById("enterAddressBtn");
-    //     enterAddress.addEventListener('click', function(){
-    //         var input = document.getElementById("inputAddress").value;
-    //         geocodeIt(input);
-    // });
+    var enterAddress = document.getElementById("enterAddressBtn");
+
+        enterAddress.addEventListener('click', function(){
+            var input = document.getElementById("inputAddress").value;
+            geocodeIt(input);
+    });
+
+
+
+
+
+
+
+
+
+
+
+
+
 
     var map = new google.maps.Map(document.getElementById('map'), mapOptions);
     var favoriteRestaurants = [
