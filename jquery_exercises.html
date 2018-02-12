@@ -15,103 +15,101 @@
         <h3 class="codeup">I will be your guide</h3>
 
     <div class="container">
+
         <h2>Types of characters you will encounter on the World Wide Web</h2>
+
             <ul id="typesofpeopleontheweb">
                 <li class="typeofPerson" id="type1">Trolls</li>
                 <p class="typeofpersonDescription">These are the most notorious of all internet dwellers. These "Trolls" thrive on the unsure and will berate all who appose their stance. Beware of starting conversations with Trolls. You have been warned.</p>
+
                 <li class="typeofPerson" id="type2">Campaigners</li>
                 <p class="typeofpersonDescription">The internet is a great place to start a cause – although there are some that overdo it with six different petitions being pushed per day. Still, if ever there was a good place to have your voice heard, the world wide web is it.</p>
+
                 <li class="typeofPerson" id="type3">Fandom</li>
                 <p class="typeofpersonDescription">There is a fandom for everything from the passionate One Direction gang who start a new trend every day to the pretty sizable followings for the likes of Springwatch and The Archers. Here’s where having a hobby can spiral into something more. Luckily only about 1% take it that step too far.</p>
+
                 <li class="typeofPerson" id="type4">YouTuber's</li>
                 <p class="typeofpersonDescription">Everyone is an expert right? If we had a grain of sand for every video with an exasperated voiceover of someone’s vital opinion then we’d easily have the Sahara. Some are whiney, some are angry, some are dull and one or two are actually pretty good. They’re difficult to find though.</p>
+
                 <li class="typeofPerson" id="type5">The Offended</li>
                 <p class="typeofpersonDescription">Yes, the internet can be a genuinely offensive and damaging place. Cyber bullying is rife and bigotry is common. But there are some who look for any excuse to be upset and make a sport of pulling someone up for their bad wording or their differing opinion.</p>
+
                 <li class="typeofPerson" id="type6">Gamers</li>
                 <p class="typeofpersonDescription">Gamers are passionate individuals who get enjoyment from one of the most profitable and artistic markets out there. They’re perfectly pleasant – well, until you get a game fact wrong that is. Or until you dare to cite your preference between the Xbox or the Playstation. Prepare for a heavier flamewar than any dragon battle you’d find in Elder Scrolls.</p>
+
                 <li class="typeofPerson" id="type7">And many more...</li>
             </ul>
         <h3 class="codeup">ALL YOUR BASES BELONG TO US.</h3>
 
-
     </div>
-<!--Id Selectors-->
-
-<!--Create content in your HTML file using at least the following elements: h1, p, ul, li, div.-->
-
-<!--Add several attributes to your elements; you will need both id and class attributes.-->
-
-<!--Use jQuery to select an element by the id. Alert the contents of the element.-->
-
-<!--Update the jQuery code to select and alert a different id.-->
-
-<!--Use the same id on 2 elements. How does this change the jQuery selection?-->
-
-<!--Remove the duplicate id. Each id should be unique on that page.-->
-
-
-
-
-
-<!--Class Selectors-->
-
-<!--Remove your custom jQuery code from previous exercises.-->
-
-<!--Update your code so that at least 3 different elements have the same class named codeup.-->
-
-<!--Using jQuery, create a border around all elements with the class codeup that is 1 pixel wide and red.-->
-
-<!--Remove the class from one of the elements. Refresh and test that the border has been removed.-->
-
-<!--Give another element an id of codeup. Does this element get a border now?-->
-
-
-
-
-<!--Element Selectors-->
-
-<!--Remove your custom jQuery code from previous exercises.-->
-
-<!--Using jQuery, set the font-size of all li elements to 20px.-->
-
-<!--Craft selectors that highlight all the h1, p, and li elements.-->
-
-<!--Create a jQuery statement to alert the contents of your h1 element(s).-->
-
-<!--Multiple Selectors-->
-
-<!--Combine your selectors that highlight all the h1, p, and li elements.-->
-
-
     <script src="js/jquery-2.2.4.js"></script>
     <script src="js/bootstrap.js"></script>
     <script>
+        // <!--Id Selectors-->
+        //
+        // <!--Create content in your HTML file using at least the following elements: h1, p, ul, li, div.-->
+        //
+        //     <!--Add several attributes to your elements; you will need both id and class attributes.-->
+        //
+        // <!--Use jQuery to select an element by the id. Alert the contents of the element.-->
+        //
+        //     <!--Update the jQuery code to select and alert a different id.-->
+        //
+        //     <!--Use the same id on 2 elements. How does this change the jQuery selection?-->
+        //
+        //     <!--Remove the duplicate id. Each id should be unique on that page.-->
+        //
+        //     <!--Class Selectors-->
+        //
+        // <!--Remove your custom jQuery code from previous exercises.-->
+        //
+        //     <!--Update your code so that at least 3 different elements have the same class named codeup.-->
+        //
+        //     <!--Using jQuery, create a border around all elements with the class codeup that is 1 pixel wide and red.-->
+        //
+        //     <!--Remove the class from one of the elements. Refresh and test that the border has been removed.-->
+        //
+        //     <!--Give another element an id of codeup. Does this element get a border now?-->
+        //
+        //     <!--Element Selectors-->
+        //
+        // <!--Remove your custom jQuery code from previous exercises.-->
+        //
+        //     <!--Using jQuery, set the font-size of all li elements to 20px.-->
+        //
+        //     <!--Craft selectors that highlight all the h1, p, and li elements.-->
+        //
+        //     <!--Create a jQuery statement to alert the contents of your h1 element(s).-->
+        //
+        //     <!--Multiple Selectors-->
+        //
+        // <!--Combine your selectors that highlight all the h1, p, and li elements.-->
         $(document).ready(function() {
             "use strict";
 
-            window.onload = function () {alert('The DOM has finished loading!')};
+            // window.onload = function () {alert('The DOM has finished loading!')};
 
             $('h1').css('font-size', '45px');
 
-            $('#type1, #type2, #type3, p').css({'font-size': '20px', 'font-style': 'italic'});
+            $("h1, h2, h3, p").css({'background-color': 'yellow', 'border-radius': '12px'});
+
+            // $('#type1, #type2, #type3').css({'font-size': '20px', 'font-style': 'italic'});
 
             $('.codeup').css({'border':'solid red 1px', 'border-radius': '12px'});
 
-            $('*').css({'text-align': 'center','font-family': 'Nanum Pen Script, cursive'});
+            $('*').css({'text-align': 'center','font-family': 'Nanum Pen Script, cursive', 'padding-right': '10px', 'padding-left': '10px'});
 
-            $('div').css({'width': '70%', 'border': 'dotted black 3px', 'margin': '0 auto', 'border-radius': '12px' });
+            $('div').css({'width': '70%', 'border': 'dotted black 3px', 'margin': '10px auto', 'border-radius': '12px' });
 
-            $('ul').css('list-style-type', 'armenian');
+            $('ul').css( 'list-style-type', 'armenian');
 
-            $('li').css('font-size', '20px');
+            $('li').css({'text-align': 'center','font-size': '20px'});
 
-            $('.typeofpersonDescription').css({'color': 'gray', 'padding-right': '10px', 'font-family': 'Nanum Pen Script, cursive'});
+            $('.typeofpersonDescription').css({'color': 'gray', 'font-family': 'Nanum Pen Script, cursive'});
 
 
 
         });
     </script>
-
-
 </body>
 </html>
