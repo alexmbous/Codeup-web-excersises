@@ -32,13 +32,19 @@
     <div class="container">
         <h2>Types of characters you will encounter on the World Wide Web</h2>
             <ul id="typesofpeopleontheweb">
-                <li id="type1">Trolls</li>
-                <li id="type2">Campaigners</li>
-                <li id="type3">Fandom</li>
-                <li id="type4">YouTuber's</li>
-                <li id="type5">The Offended</li>
-                <li id="type6">Gamers</li>
-                <li id="type7">And many more...</li>
+                <li class="typeofPerson" id="type1">Trolls</li>
+                <p class="typeofpersonDescription">These are the most notorious of all internet dwellers. These "Trolls" thrive on the unsure and will berate all who appose their stance.</p>
+                <li class="typeofPerson" id="type2">Campaigners</li>
+                <p class="typeofpersonDescription">The internet is a great place to start a cause – although there are some that overdo it with six different petitions being pushed per day. Still, if ever there was a good place to have your voice heard, the world wide web is it.</p>
+                <li class="typeofPerson" id="type3">Fandom</li>
+                <p class="typeofpersonDescription">There is a fandom for everything from the passionate One Direction gang who start a new trend every day to the pretty sizeable followings for the likes of Springwatch and The Archers. Here’s where having a hobby can spiral into something more. Luckily only about 1% take it that step too far.</p>
+                <li class="typeofPerson" id="type4">YouTuber's</li>
+                <p class="typeofpersonDescription">Everyone is an expert right? If we had a grain of sand for every video with an exasperated voiceover of someone’s vital opinion then we’d easily have the Sahara. Some are whiney, some are angry, some are dull and one or two are actually pretty good. They’re difficult to find though.</p>
+                <li class="typeofPerson" id="type5">The Offended</li>
+                <p class="typeofpersonDescription">Yes, the internet can be a genuinely offensive and damaging place. Cyber bullying is rife and bigotry is common. But there are some who look for any excuse to be upset and make a sport of pulling someone up for their bad wording or their differing opinion.</p>
+                <li class="typeofPerson" id="type6">Gamers</li>
+                <p class="typeofpersonDescription">Gamers are passionate individuals who get enjoyment from one of the most profitable and artistic markets out there. They’re perfectly pleasant – well, until you get a game fact wrong that is. Or until you dare to cite your preference between the Xbox or the Playstation. Prepare for a heavier flamewar than any dragon battle you’d find in Elder Scrolls.</p>
+                <li class="typeofPerson" id="type7">And many more...</li>
             </ul>
 
 
@@ -58,10 +64,7 @@
 <!--Use the same id on 2 elements. How does this change the jQuery selection?-->
 
 <!--Remove the duplicate id. Each id should be unique on that page.-->
-<h1></h1>
-<h2></h2>
 
-<p></p>
 
 
 
@@ -97,7 +100,7 @@
 
 
     <script src="js/jquery-2.2.4.js"></script>
-
+    <script src="js/bootstrap.js"></script>
     <script>
         $(document).ready(function() {
             "use strict";
@@ -107,12 +110,9 @@
                 alert('The DOM has finished loading!');
             };
 
-            $('ul').css('font-family', 'Nanum Pen Script', 'cursive');
+            $('li').css('font-family', 'Nanum Pen Script', 'cursive');
 
-
-
-
-
+            $('.typeofpersonDescription').css({'color': 'gray', 'padding-right': '10px', 'font-family': 'Nanum Pen Script, cursive'});
 
         });
     </script>
