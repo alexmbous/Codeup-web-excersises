@@ -5,10 +5,46 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Curriculum Code Sample</title>
+    <title>JQuery Exercise's</title>
+    <style>
+        h1, h2, h3 {
+            text-align: center;
+            font-family: sans-serif;
+        }
+        .container {
+            width: 50%;
+            border: dotted black 3px;
+            margin: 0 auto;
+        }
+        ul{
+            list-style-type: armenian;
+            list-style-type: -moz-arabic-indic;
+        }
+
+    </style>
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
 </head>
 <body>
+    <h1>Welcome to Internet</h1>
 
+        <h3>I will be your guide</h3>
+
+    <div class="container">
+        <h2>Types of characters you will encounter on the World Wide Web</h2>
+            <ul id="typesofpeopleontheweb">
+                <li id="type1">Trolls</li>
+                <li id="type2">Campaigners</li>
+                <li id="type3">Fandom</li>
+                <li id="type4">YouTuber's</li>
+                <li id="type5">The Offended</li>
+                <li id="type6">Gamers</li>
+                <li id="type7">And many more...</li>
+            </ul>
+
+
+
+
+    </div>
 <!--Id Selectors-->
 
 <!--Create content in your HTML file using at least the following elements: h1, p, ul, li, div.-->
@@ -23,10 +59,11 @@
 
 <!--Remove the duplicate id. Each id should be unique on that page.-->
 <h1></h1>
+<h2></h2>
+
 <p></p>
-<ul></ul>
-<li></li>
-<div></div>
+
+
 
 
 <!--Class Selectors-->
@@ -59,16 +96,27 @@
 <!--Combine your selectors that highlight all the h1, p, and li elements.-->
 
 
+    <script src="js/jquery-2.2.4.js"></script>
 
-<script>
-    "use strict";
-    window.onload = function() {
-        alert('The DOM has finished loading!'  );
-    };
+    <script>
+        $(document).ready(function() {
+            "use strict";
 
 
-</script>
+            window.onload = function () {
+                alert('The DOM has finished loading!');
+            };
 
-<script src="js/jquery-2.2.4.js"></script>
+            $('ul').css('font-family', 'Nanum Pen Script', 'cursive');
+
+
+
+
+
+
+        });
+    </script>
+
+
 </body>
 </html>

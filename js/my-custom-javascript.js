@@ -1,5 +1,5 @@
 "use strict";
-
+// this is used to protect variables from the Global scope *//
 $(document).ready(function() {
 
     // INSERT JAVASCRIPT CODE SAMPLE HERE
