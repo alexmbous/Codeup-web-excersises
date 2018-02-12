@@ -10,9 +10,9 @@
     <link href="https://fonts.googleapis.com/css?family=Nanum+Pen+Script" rel="stylesheet">
 </head>
 <body>
-    <h1>Welcome to Internet</h1>
+    <h1 class="codeup">Welcome to Internet</h1>
 
-        <h3>I will be your guide</h3>
+        <h3 class="codeup">I will be your guide</h3>
 
     <div class="container">
         <h2>Types of characters you will encounter on the World Wide Web</h2>
@@ -31,8 +31,7 @@
                 <p class="typeofpersonDescription">Gamers are passionate individuals who get enjoyment from one of the most profitable and artistic markets out there. They’re perfectly pleasant – well, until you get a game fact wrong that is. Or until you dare to cite your preference between the Xbox or the Playstation. Prepare for a heavier flamewar than any dragon battle you’d find in Elder Scrolls.</p>
                 <li class="typeofPerson" id="type7">And many more...</li>
             </ul>
-
-
+        <h3 class="codeup">ALL YOUR BASES BELONG TO US.</h3>
 
 
     </div>
@@ -90,22 +89,23 @@
         $(document).ready(function() {
             "use strict";
 
-            window.onload = function () {
-                alert('The DOM has finished loading!');
-            };
+            window.onload = function () {alert('The DOM has finished loading!');};
 
             $('h1').css('font-size', '45px');
 
-            $('h1, h2, h3').css({'text-align': 'center','font-family': 'Nanum Pen Script, cursive', 'font-weight': 'bold'});
+            $('.codeup').css({'border':'solid red 1px', 'border-radius': '12px'});
 
-            $('.container').css({'width': '70%', 'border': 'dotted black 3px', 'margin': '0 auto', 'border-radius': '12px'});
+            $('*').css({'text-align': 'center','font-family': 'Nanum Pen Script, cursive'});
 
+            $('div').css({'width': '70%', 'border': 'dotted black 3px', 'margin': '0 auto', 'border-radius': '12px' });
 
-            $('*').css({'list-style-type': 'armenian', 'list-style-type': '-moz-arabic-indic'}) ;
+            $('ul').css('list-style-type', 'armenian');
 
             $('li').css('font-family', 'Nanum Pen Script', 'cursive');
 
             $('.typeofpersonDescription').css({'color': 'gray', 'padding-right': '10px', 'font-family': 'Nanum Pen Script, cursive'});
+
+
 
         });
     </script>
