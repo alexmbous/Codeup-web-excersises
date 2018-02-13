@@ -20,7 +20,7 @@ $(document).ready(function() {
         if (codeIndex === cheatCode.length) {
             alert('YOU GOT 30 lIVES!');
             audio.play();
-            $('html').css({'background-size': 'cover','background-image': "url('css/img/Contra.jpg')", 'color': 'red'});
+            $('html').css({'background-size': 'cover','background-image': "url('css/img/Contra.jpg')"});
         }
     });
 });
