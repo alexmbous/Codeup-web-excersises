@@ -89,11 +89,11 @@
 
             window.onload = function () {alert('The DOM has finished loading!')};
 
-            $('.codeup').click(function(event){$('h1, h2, h3').css('background', 'gray')});
+            $('.codeup').click(function(event){$(this).css('background', 'gray')});
 
-            $('p').dblclick(function(event){$('p').css('font-size', '18px')});
+            $('p').dblclick(function(event){$(this).css('font-size', '18px')});
 
-            $("h2, h3").css({'background-color': 'yellow', 'border-radius': '12px'});
+            $("h1, h2, h3").css({'background-color': 'yellow', 'border-radius': '12px'});
 
             // $('#type1, #type2, #type3').css({'font-size': '20px', 'font-style': 'italic'});
 
