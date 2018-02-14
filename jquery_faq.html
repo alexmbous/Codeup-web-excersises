@@ -17,48 +17,55 @@
 </head>
 <body>
 
-        <div class="container">
+    <div>
+        <h1 class="hideSignUp">Would you like to sign up for our newsletter?<span id="hideSignUpButton">   X   </span></h1>
+    </div>
 
-            <h2>10 Crazy Facts About National Parks That Will Make You Say WTF?!</h2>
+    <div>
+        <h2 class="invisible">Register to Get Amazing Deals</h2>
+    </div>
+        <!--<div class="container">-->
 
-            <dl>
-                <dt class="facts" id="fact1">YellowStone is not the First</dt>
-                <dd class="invisible">Never forget that the Hot Springs National parks in Arkansas is the real first national park.</dd>
+            <!--<h2>10 Crazy Facts About National Parks That Will Make You Say WTF?!</h2>-->
 
-                <dt class="facts" id="fact2">The second national park is now a state park</dt>
-                <dd class="invisible">Gonna be the in Michigan? Mackinac national park was established in 1875 as a resort island in michigan but was turned back over to a state park in 1895</dd>
+            <!--<dl>-->
+                <!--<dt class="facts" id="fact1">YellowStone is not the First</dt>-->
+                <!--<dd class="invisible">Never forget that the Hot Springs National parks in Arkansas is the real first national park.</dd>-->
 
-                <dt class="facts" id="fact3">NPS was founded 44 years after Yellowstone became a national park</dt>
-                <dd class="invisible">Give it a chance. NPS became a government office in 1916.</dd>
+                <!--<dt class="facts" id="fact2">The second national park is now a state park</dt>-->
+                <!--<dd class="invisible">Gonna be the in Michigan? Mackinac national park was established in 1875 as a resort island in michigan but was turned back over to a state park in 1895</dd>-->
 
-                <dt class="facts" id="fact4">Park Ranger's</dt>
-                <dd class="invisible">You might wonder who started the NPS. The US Army.</dd>
+                <!--<dt class="facts" id="fact3">NPS was founded 44 years after Yellowstone became a national park</dt>-->
+                <!--<dd class="invisible">Give it a chance. NPS became a government office in 1916.</dd>-->
 
-                <dt class="facts" id="fact5">400 units</dt>
-                <dd class="invisible">Up over 400 units the NPS oversees.</dd>
+                <!--<dt class="facts" id="fact4">Park Ranger's</dt>-->
+                <!--<dd class="invisible">You might wonder who started the NPS. The US Army.</dd>-->
 
-                <dt class="facts" id="fact6">Land Loans</dt>
-                <dd class="invisible">Never thought that someone could own a park? NPS actually leases land from local villages. Every 50 years a new contract has to be negotiated.</dd>
+                <!--<dt class="facts" id="fact5">400 units</dt>-->
+                <!--<dd class="invisible">Up over 400 units the NPS oversees.</dd>-->
 
-                <dt class="facts" id="fact7">Carslbad Caverns Debate</dt>
-                <dd class="invisible">Gonna stuff stuff stuff</dd>
+                <!--<dt class="facts" id="fact6">Land Loans</dt>-->
+                <!--<dd class="invisible">Never thought that someone could own a park? NPS actually leases land from local villages. Every 50 years a new contract has to be negotiated.</dd>-->
 
-                <dt class="facts" id="fact8">Washington National Park</dt>
-                <dd class="invisible">Let info.</dd>
+                <!--<dt class="facts" id="fact7">Carslbad Caverns Debate</dt>-->
+                <!--<dd class="invisible">Gonna stuff stuff stuff</dd>-->
 
-                <dt class="facts" id="fact9">Teddy Roosevelt National Park</dt>
-                <dd class="invisible">You info</dd>
+                <!--<dt class="facts" id="fact8">Washington National Park</dt>-->
+                <!--<dd class="invisible">Let info.</dd>-->
 
-                <dt class="facts" id="fact10">Rock Creek Park</dt>
-                <dd class="invisible">Down info</dd>
-            </dl>
-        </div>
+                <!--<dt class="facts" id="fact9">Teddy Roosevelt National Park</dt>-->
+                <!--<dd class="invisible">You info</dd>-->
 
-        <button type="button" class="invis">ALL YOUR PARKS BELONG TO US.</button>
-        <button type="button>" class="rickroll">Rick Roll Some Fools</button>
+                <!--<dt class="facts" id="fact10">Rock Creek Park</dt>-->
+                <!--<dd class="invisible">Down info</dd>-->
+            <!--</dl>-->
+        <!--</div>-->
+
+        <!--<button type="button" class="invis">ALL YOUR PARKS BELONG TO US.</button>-->
+        <!--<button type="button>" class="rickroll">Rick Roll Some Fools</button>-->
 
 
-        <h3>Zion National Park</h3>
+        <h3 id="parkName" class="park1">Zion National Park</h3>
         <ul>
             <li>No slumber parties.
                 Avoid camping in or near archeological sites. Smoke from campfires stains walls and cliffs, and charcoal leaves a mess. Never use wood from archeological sites in campfires.</li>
@@ -68,7 +75,7 @@
                 Leave all artifacts, including small fragments of pottery and stone chips, right where you find them for others to enjoy. Out of context, artifacts cannot help us to understand the past. It is illegal to remove them.</li>
         </ul>
 
-        <h3>Grand Canyon National Park</h3>
+        <h3 id="parkName" class="park2">Grand Canyon National Park</h3>
         <ul>
             <li>Early Explorers
                 of the canyon and Colorado River include a few brave men who were willing to go into "The Great Unknown" risking their lives to learn the canyon's secrets. They were the first to document the power of the Colorado River, understand the immense size of Grand Canyon, and share its beauty and danger with the world. Their adventures still inspire explorers today.</li>
@@ -78,7 +85,7 @@
                 After the Santa Fe Railroad started bringing visitors to the canyon's South Rim in 1901, business was booming for creative entrepeneurs who came to make their fortune at the canyon. The developing village was a tough place to do business with the Santa Fe Railroad and its partner The Fred Harvey Company running the show. However, a few strong willed and stubborn folks persevered and their legacy lives on at the canyon.</li>
         </ul>
 
-        <h3>Death Valley National Park</h3>
+        <h3 id="parkName" class="park3">Death Valley National Park</h3>
         <ul>
             <li>The Lost '49ers
                 At the height of the California Goldrush a group of pioneers decided, against the warning of their wagon master, to take a "shortcut" across the unknown deserts of the West. This fatal misjudgement would give us one of our greatest stories of trial and heroism, and it would give us the name Death Valley.</li>
@@ -98,32 +105,29 @@
         <script src="js/bootstrap.js"></script>
         <script>
             'use strict';
-            function wrapFirstWord () {
-                // Select only the first text node
-                var node = $("div").contents().filter(function () {
-                        return this.nodeType == 3;
-                    }).first(),
-
-                    // Get the text...
-                    text = node.text(),
-
-                    // ... and the first word
-                    first = text.slice(0, text.indexOf(" "));
-
-                if (!node.length)
-                    return;
-
-                // Remove the first word from the text
-                node[0].nodeValue = text.slice(first.length);
-
-                // Add it back in with HTML around it
-                node.before('<span>' + first + '</span><br/>');
-            };
-            console.log(wrapFirstWord());
-
-
-
-
+            // function wrapFirstWord () {
+            //     // Select only the first text node
+            //     var node = $("div").contents().filter(function () {
+            //             return this.nodeType == 3;
+            //         }).first(),
+            //
+            //         // Get the text...
+            //         text = node.text(),
+            //
+            //         // ... and the first word
+            //         first = text.slice(0, text.indexOf(" "));
+            //
+            //     if (!node.length)
+            //         return;
+            //
+            //     // Remove the first word from the text
+            //     node[0].nodeValue = text.slice(first.length);
+            //
+            //     // Add it back in with HTML around it
+            //     node.before('<span>' + first + '</span><br/>');
+            // };
+            // console.log(wrapFirstWord());
+            //
             //
             // $('.rickroll').click(function(){
             //     $('dt').each(function(index,element){
@@ -149,17 +153,26 @@
                 });
             });
 
-            $('h3').click(function() {
-                $(this).next().children().css("font-weight", "bold");
-            });
+            // $('h3').click(function() {
+            //     $(this).next().children().css("font-weight", "bold");
+            // });
 
             $('li').click(function() {
                 $(this).parent().children().first().css("color", "blue");
             });
 
+            $('#hideSignUpButton').click(function(){
+                $(this).parent().hide();
+            });
 
-
-
+            $('h3').click(function(){
+                $('ul').children().toggle();
+            });
+            $('document').ready(function(){
+                $('h2.invisible').fadeIn(8000)
+                    .removeClass('.invisible');
+                });
+            $('<span>').css('border','solid black 1px');
 
         </script>
 </body>
