@@ -1,0 +1,181 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather Map API Exercise</title>
+    <link href="https://fonts.googleapis.com/css?family=Rosarivo" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+    <style>
+
+        html,
+        body{
+            text-align: center;
+            padding-top: 2%;
+            padding-left: 4%;
+            padding-right: 4%;
+            background-color: #B4DBFA;
+            font-family: 'Rosarivo', serif;
+        }
+
+        map {
+            display: block;
+            text-align: center;
+            width: 80%;
+        }
+
+        .map,
+        .forecast{
+            background-color: gray;
+            height: 300px;
+            width: 500px;
+            text-align: center;
+        }
+
+        .forecast{
+            width: 95%;
+            background-color: whitesmoke;
+            padding: 10px 5px;
+            border: solid gray 15px;
+        }
+
+        img {
+            width: 90px;
+
+        }
+
+
+        .container,
+        div.container
+         {
+            padding-right: 10%;
+        }
+
+        .searchArea{
+            background: #B4DBFA;
+        }
+
+    </style>
+
+</head>
+
+
+
+<body>
+<div class="container">
+    <div class="searchArea">
+    <h1>Weather Application</h1>
+        <h2 id="searchLocation"> </h2>
+
+    <div class="weather">
+        <div class="row">
+            <section class="forecast">Forecast</section>
+        </div>
+            <section>
+                <form class="form-horizontal" action="">
+                    <div class="form-group">
+                        <label for="locationNameText" class="control-label">Location</label>
+                        <div>
+                            <input type="text" class="form-control" id="locationNameText" placeholder="Name of Location">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="locationNameLatLon" class="control-label">lat & long</label>
+                        <div>
+                            <input type="number" class="form-control" id="locationNameLatLon" placeholder="Lat/Long">
+                        </div>
+                    </div>
+
+                    <label for="days">Number of days</label>
+                    <select name="days" id="days" class="form-control">
+                        <option selected="selected">1</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5</option>
+                        <option>6</option>
+                        <option>7</option>
+                        <option>8</option>
+                        <option>9</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                    </select>
+                    <br>
+                    <button id="search" class="btn btn-search">Search</button>
+
+
+                </form>
+            </section>
+        </div>
+    </div>
+    <br>
+    <section class="map">
+
+
+    </section>
+</div>
+<script src="js/jquery-2.2.4.min.js"></script>
+<script src="js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous">
+</script>
+
+    <script>
+
+
+      //  $(document).ready(function() {
+            'use strict';
+
+            //
+            // $("#days").change(function (event) {
+            //
+            //     var options = {
+            //         "days": 16,
+            //         "units": "imperial",
+            //         "lat": 38.9072,
+            //         "lng": -77.0369
+            //     };
+            //
+            //     options.days = $(event.target).val();
+            //     getForecast(options);
+
+
+
+
+            $.get("http://api.openweathermap.org/data/2.5/forecast/daily", {
+                APPID: "a280d317b70b41271ed25f8e6649645e",
+                lat: 38.9072,
+                lon: -77.0369,
+                units: "imperial",
+                cnt: 2
+            }).done(function (data) {
+
+                console.log(data);
+                var myCity= "";
+
+                myCity += `<h2>${data.city.name}</h2>`;
+                myCity += "<img src=http://openweathermap.org/img/w/" + data.list[0].weather[0].icon + ".png />";
+                myCity += `<h4>${data.list[0].temp.day} degrees </h4>`;
+                myCity += `<h4>${data.list[0].weather[0].description}</h4>`;
+
+                $(".forecast").append(myCity);
+            });
+                    //
+                    // }).fail(function (status, error) {
+                    //     console.log(status);
+                    //     console.log(error);
+                    // })
+
+
+        // });
+    </script>
+</body>
+</html>

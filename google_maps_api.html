@@ -145,15 +145,15 @@
 
 
 
-    // function geocodeIt(someAddress){
-    //     var geocoder = new google.maps.Geocoder();
-    //     geocoder.geocode({address: someAddress}, function(results, status){
-    //
-    //         if (status === "OK"){
-    //             map.setCenter(results[0].geometry.location);
-    //         }
-    //     });
-    // }
+    function geocodeIt(someAddress){
+        var geocoder = new google.maps.Geocoder();
+        geocoder.geocode({address: someAddress}, function(results, status){
+
+            if (status === "OK"){
+                map.setCenter(results[0].geometry.location);
+            }
+        });
+    }
     //
     //
     // geocoder.geocode({
@@ -167,7 +167,7 @@
     //         map.setCenter(results[0].geometry.location);
     //     }
     // });
-    //
+
     //
     // function reverseGeocodeIt(latitude, longitude) {
     //         var geocoder = new google.maps.Geocoder();
