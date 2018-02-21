@@ -9,6 +9,47 @@
     <link rel="stylesheet" href="css/Home_inventory_program.css">
     <script src="js/bootstrap-3.3.7-dist/css/bootstrap.css"></script>
     <script src="js/jquery-2.2.4.min.js"></script>
+
+
+    <style>
+        html
+        {
+
+            text-align: center;
+            padding-left: 5%;
+            padding-right: 5%;
+            font-family: 'Quattrocento', serif;
+            font-size: 20px;
+            background-color: #4c8c86;
+            border: dotted black 2px;
+        }
+
+        h2,
+        table,
+        tr,
+        th,
+        td {
+
+            border: solid black 2px;
+            background-color: #bec09a;
+            border-radius: 5px;
+        }
+
+        th{
+            background-color: #5dccd2;
+        }
+
+        td{
+            background-color: #e8eac4;
+        }
+        /*.cost{*/
+            /*font-size: ;*/
+        /*}*/
+
+
+
+
+    </style>
 </head>
 <body>
 
@@ -27,15 +68,11 @@
         </thead>
         <tbody>
         <tr>
-            <td><input type="text" class="ingredient" size="10" maxlength="10" placeholder="Ingredient" id="ingredient"                             name="inventoryLine"  aria-hidden=false></td>
-            <td><input type="text" class="standard" size="10" maxlength="10" placeholder="Should Have" id="standard"
-                       name="inventoryLine" aria-hidden=false></td>
-            <td><input type="text" class="have" size="10" maxlength="10" placeholder="Have" id="have"
-                       name="inventoryLine"  aria-hidden=false></td>
-            <td><input type="text" class="need" size="10" maxlength="10" placeholder="Need" id="need"
-                       name="inventoryLine"  aria-hidden=false></td>
-            <td><input type="text" class="cost" size="10" maxlength="10" placeholder="Cost" id="cost"
-                       name="inventoryLine"  aria-hidden=false></td>
+            <td><input type="text" class="ingredient" placeholder="Ingredient" id="ingredient" name="inventoryLine"></td>
+            <td><input type="text" class="standard" placeholder="Should Have" id="standard" name="inventoryLine"></td>
+            <td><input type="text" class="have" placeholder="Have" id="have" name="inventoryLine"></td>
+            <td><input type="text" class="need"  placeholder="Need" id="need" name="inventoryLine"></td>
+            <td><input type="text" class="cost" placeholder="Cost" id="cost" name="inventoryLine"></td>
         </tr>
         <tr>
             <td>Sliced Cheese</td>
@@ -54,13 +91,15 @@
         </tbody>
     </table>
 </div>
-
+<button id="addBtn">
+    <label for="ingredient" class="ingredient">Enter your ingredient.</label>
+</button>
 
 <script>
     (function() {
     "use strict";
 
-    var addInventoryItem = {};
+    let addInventoryItem = {};
     addInventoryItem.ingredient = "";
     addInventoryItem.need = "";
     addInventoryItem.have = "";
@@ -81,4 +120,3 @@
 
 
 <div></div>
-<label for="ingredient" class="ingredient">Enter your ingredient.</label>
