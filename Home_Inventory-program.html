@@ -9,96 +9,45 @@
     <link rel="stylesheet" href="css/Home_inventory_program.css">
     <script src="js/bootstrap-3.3.7-dist/css/bootstrap.css"></script>
     <script src="js/jquery-2.2.4.min.js"></script>
-
-
-    <style>
-        html
-        {
-
-            text-align: center;
-            padding-left: 5%;
-            padding-right: 5%;
-            font-family: 'Quattrocento', serif;
-            font-size: 20px;
-            background-color: #4c8c86;
-            border: dotted black 2px;
-        }
-
-        h2{
-            background:
-        }
-
-        h2,
-        table,
-        tr,
-        th,
-        td {
-
-            border: solid black 2px;
-            background-color: #bec09a;
-            border-radius: 5px;
-        }
-
-        th{
-            background-color: #5dccd2;
-        }
-
-        td{
-            background-color: #e8eac4;
-        }
-        /*.cost{*/
-            /*font-size: ;*/
-        /*}*/
-
-
-
-
-    </style>
 </head>
 <body>
 
-<div class="container">
+
     <h2>Dynamic Grocery List</h2>
 
-    <table class="table table-bordered">
-        <thead>
-        <tr>
-            <th>Ingredient</th>
-            <th>Standard</th>
-            <th>Have</th>
-            <th>Need</th>
-            <th>Average Cost</th>
-        </tr>
-        </thead>
-        <tbody>
-        <tr>
-            <td><input type="text" class="ingredient" placeholder="Ingredient" id="ingredient" name="inventoryLine"></td>
-            <td><input type="text" class="standard" placeholder="Should Have" id="standard" name="inventoryLine"></td>
-            <td><input type="text" class="have" placeholder="Have" id="have" name="inventoryLine"></td>
-            <td><input type="text" class="need"  placeholder="Need" id="need" name="inventoryLine"></td>
-            <td><input type="text" class="cost" placeholder="Cost" id="cost" name="inventoryLine"></td>
-        </tr>
-        <tr>
-            <td>Sliced Cheese</td>
-            <td>1 package</td>
-            <td>.25 ea</td>
-            <td>.75 ea</td>
-            <td>2.25 per package </td>
-        </tr>
-        <tr>
-            <td>White Bread</td>
-            <td>1 loaf</td>
-            <td>.75 loaf</td>
-            <td>.5 gal</td>
-            <td>1.37 per .5 gal or </td>
-        </tr>
-        </tbody>
-    </table>
-</div>
-<button id="addBtn">
-    <label for="ingredient" class="ingredient">Enter your ingredient.</label>
-</button>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Ingredient</th>
+                    <th>Standard</th>
+                    <th>Have</th>
+                    <th>Need</th>
+                    <th>Average Cost</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><input type="text" class="ingredient" placeholder="Ingredient" id="ingredient" name="inventoryLine"></td>
+                    <td><input type="text" class="standard" placeholder="Should Have" id="standard" name="inventoryLine"></td>
+                    <td><input type="text" class="have" placeholder="Have" id="have" name="inventoryLine"></td>
+                    <td><input type="text" class="need"  placeholder="Need" id="need" name="inventoryLine"></td>
+                    <td><input type="text" class="cost" placeholder="Cost" id="cost" name="inventoryLine"></td>
+                </tr>
+                <tr>
+                    <td>Sliced Cheese</td>
+                    <td>1 package</td>
+                    <td>.25 ea</td>
+                    <td>.75 ea</td>
+                    <td>2.25 per package </td>
+                </tr>
 
+            </tbody>
+        </table>
+
+    <button id="addBtn">
+        <label for="ingredient" class="ingredient">Enter your ingredient.</label>
+    </button>
+<script src="js/Home_inventory_program.js"></script>
 <script>
     (function() {
     "use strict";

@@ -20,3 +20,49 @@ table {
 table tr:nth-child(even){background:#ccc;}
 
 table tr:nth-child(odd){background:#eee;}
+
+html
+{
+    text-align: center;
+    width: 80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    font-family: 'Quattrocento', serif;
+    font-size: 20px;
+    background-color: #4c8c86;
+    border: dotted black 2px;
+}
+
+h2{
+    border: solid black 2px;
+    background-color: #bec09a;
+    border-radius: 5px;
+}
+table,
+tr,
+th,
+td {
+
+    border: solid black 2px;
+    background-color: #bec09a;
+    border-radius: 5px;
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+th{
+    background-color: #5dccd2;
+}
+
+td{
+    background-color: #e8eac4;
+}
+
+.ingredient,
+.standard ,
+.have,
+.need,
+.cost {
+    text-align: center;
+}
