@@ -20,19 +20,16 @@ c1cf4bb3294774d6d22696e69335131e111d6e1c
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 */
-function getDateOfLastCommit(username) {
-    let dates = [];
+const getDateOfLastCommit = (username) => {
+    return fetch(`https://api.github.com/users/${username}/events`, {headers: {'Authorization': 'token c1cf4bb3294774d6d22696e69335131e111d6e1c'}})
+        .then((response) => response.json())
+        .then(data => {
+            let lastCommit = data[0].created_at.substring(0, 10);
+            console.log(`${username}'s last commit was on: ${lastCommit}`)
+        })
+        .catch(() => console.error('BAD REQUEST!'));
 
-    fetch('https://api.github.com/users/' + username + '/repos?per_page=100', {headers: {'Authorizations': 'token 3e24baca08782a0c80088d64bad390b3b7cc618d'}})
-        .then(response => response.json())
-        .then(repositories => {
-            repositories.map(repo => {
-                dates.push(repo.updated_at);
-            });
-            dates.sort();
-            document.querySelector('span').innerText = new Date(dates[dates.length -1]);
-        });
-}
+};
 getDateOfLastCommit("alexmbous");
 
 
