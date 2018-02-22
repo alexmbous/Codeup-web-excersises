@@ -28,7 +28,6 @@ const getDateOfLastCommit = (username) => {
             console.log(`${username}'s last commit was on: ${lastCommit}`)
         })
         .catch(() => console.error('BAD REQUEST!'));
-
 };
 getDateOfLastCommit("alexmbous");
 
