@@ -5,21 +5,28 @@
 </head>
 <body>
 <h1 id="codeup">Hello Codeup</h1>
-
+<p></p>
 <script src="js/my-custom-javascript.js"></script>
 <script>
     "use strict";
+    //
+    // const isDivisibleBy3 = n => n % 3 === 0;
+    //
+    // const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    // console.log(numbers.filter(isDivisibleBy3));
+    // console.log(numbers);
+    //
 
-    $(document).ready(function() {
-        $('#codeup').hover(
-            function() {
-                $(this).css('background-color', '#FF0');
-            },
-            function() {
-                $(this).css('background-color', '#FFF');
-            }
-        );
+
+    const p = new Promise((resolve, reject) => {
+        resolve(3)
     });
+
+    p.then(result => console.log(result));
+    p.catch(error => console.log('An error occured!'));
+
+
+
 </script>
 </body>
 </html>

@@ -194,3 +194,70 @@ function isThree(input){
 // Make a function named isBlank(input) that determines if a given input is spaces, newline characters, or tabs.
 //     Make a function named isNumeric(input) returns true/false if the input is a number or numeric string
 // Make a function named trim(string) that removes empty spaces before and after the input.
+
+
+// Write a function that returns a passed string with letters in alphabetical order;
+
+
+function alphabet_order(str)
+{
+    return str.split('').sort().join('');
+}
+
+
+
+
+// Wite a function that accepts a string as a parameter and counts the number of vowels within the string. Remember , that y can be both a vowel and consonant; do NOT count y as a vowel.
+
+
+
+function countVowel(str1)
+{
+    var vowel_list = 'aeiouAEIOU';
+    var vcount = 0;
+
+    for(var x = 0; x < str1.length ; x++)
+    {
+        if (vowel_list.indexOf(str1[x]) !== -1)
+        {
+            vcount += 1;
+        }
+
+    }
+    return vcount;
+}
+// console.log(countVowel("The quick brown fox"));
+
+
+//Write a function to extract unique characters from a string, in order of their apperance within the string. Do not worry about capital vs lowercase letters.
+
+
+function removeSpecialStuff(str) {
+    return str.replace(/[^a-zA-Z ]/g, "");
+}
+console.log(removeSpecialStuff("h34958h*(0934t)*"));
+
+
+
+// Write a program to convert temperatures from fahrenheit to celsius and then Celsius to Kelvin.
+// just multiply the temperature by 1.8 and then add 32 to the product. If you want to convert temperature from Fahrenheit to Celsius, subtract 32 from the number and then divide the difference by 1.8.
+//You can convert between Celsius and Kelvin like this: Kelvin = Celsius + 273.15. Often, the value of 273 is used instead of 273.15. Check with your teacher on this point. All examples to follow will use 273.
+
+function convertTemp(f){
+    var c = ((f - 32) * 5/9);
+    var k = c + 273.15;
+    return k;
+}
+console.log(convertTemp("78"));
+
+
+// Write a function that converts between camelCase, Snake_case, and kebab-case. You must be able to handle all three case types. All input you are given will be valid.
+
+
+function snakeToCamel(s){
+    return s.replace(/(\_\w)/g, function(m){return m[1].toUpperCase();});
+}
+
+function camelToSnake(s){
+    return s.replace(/(\A-Z\w)/g, function(m){return m[1].toLowerCase().join("_");});
+}
